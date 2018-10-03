@@ -1,0 +1,2016 @@
+{
+	"info": {
+		"_postman_id": "baa98583-5281-46da-9978-8eddce992aad",
+		"name": "Phu tung xe may",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Menus",
+					"item": [
+						{
+							"name": "Get list menu",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/menus?page_size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"menus"
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								},
+								"description": "Get list menu"
+							},
+							"response": []
+						},
+						{
+							"name": "Get first menu details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/menus/639af89f-0fca-4423-8a88-dc360621224a/details",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"menus",
+										"639af89f-0fca-4423-8a88-dc360621224a",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add new menu",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_name",
+											"value": "Sản phẩm phân loại theo xe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/menus/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"menus",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit menu",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_name",
+											"value": "Sản phẩm phân loại theo xe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/menus/9f9b444c-0248-4c20-92de-6250ce613bc6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"menus",
+										"9f9b444c-0248-4c20-92de-6250ce613bc6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete menu",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/menus/49cf0dbf-34db-4949-9e8f-062e16cb9dbc",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"menus",
+										"49cf0dbf-34db-4949-9e8f-062e16cb9dbc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list sub menu",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/sub_menus?page_size=100",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sub_menus"
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get first sub menu details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/sub_menus/18839f5d-b0d9-4934-8ba7-92b7e1b2edf6/details",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sub_menus",
+										"18839f5d-b0d9-4934-8ba7-92b7e1b2edf6",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add submenu",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sub_menu_name",
+											"value": "Vỏ xe - ruột xe - căm - niềng",
+											"type": "text"
+										},
+										{
+											"key": "menu_id",
+											"value": "65d6b456-561b-4cb2-a7f7-21c8ccb5c11a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/sub_menus/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sub_menus",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit sub menu",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sub_menu_name",
+											"value": "Lenovosaasd",
+											"type": "text"
+										},
+										{
+											"key": "menu_id",
+											"value": "65d6b456-561b-4cb2-a7f7-21c8ccb5c11a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/sub_menus/b083a0aa-39d6-41a8-941a-60b71e3f3167",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sub_menus",
+										"b083a0aa-39d6-41a8-941a-60b71e3f3167"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete sub menu",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/sub_menus/b083a0aa-39d6-41a8-941a-60b71e3f3167",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sub_menus",
+										"b083a0aa-39d6-41a8-941a-60b71e3f3167"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Producers",
+					"item": [
+						{
+							"name": "Add producer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file"
+										},
+										{
+											"key": "name",
+											"value": "hhh",
+											"type": "text"
+										},
+										{
+											"key": "descriptions",
+											"value": "bbbb",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/producers/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"producers",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit producers",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "asdsad",
+											"type": "text"
+										},
+										{
+											"key": "descriptions",
+											"value": "bbbb",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"value": "",
+											"type": "file"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/producers/e8cc995a-f51c-4314-ace8-289f46eed877/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"producers",
+										"e8cc995a-f51c-4314-ace8-289f46eed877",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete producers",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/producers/9b4b80a4-0655-47b9-9226-547ec0828548/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"producers",
+										"9b4b80a4-0655-47b9-9226-547ec0828548",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list producers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/producers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"producers"
+									]
+								},
+								"description": "danh sach nha san xuat"
+							},
+							"response": []
+						},
+						{
+							"name": "Get producer details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/producers/e8cc995a-f51c-4314-ace8-289f46eed877/details",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"producers",
+										"e8cc995a-f51c-4314-ace8-289f46eed877",
+										"details"
+									]
+								},
+								"description": "chi tiet nha san xuat"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Motorbikes",
+					"item": [
+						{
+							"name": "Add motorbike",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Honda",
+											"type": "text"
+										},
+										{
+											"key": "descriptions",
+											"value": "bbbb",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/motorbikes/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"motorbikes",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit motorbike",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Yamaha",
+											"type": "text"
+										},
+										{
+											"key": "descriptions",
+											"value": "AAAAs",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/motorbikes/ce1689b3-93a9-4784-8daf-d3357521802a/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"motorbikes",
+										"ce1689b3-93a9-4784-8daf-d3357521802a",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete motorbike",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/motorbikes/ce1689b3-93a9-4784-8daf-d3357521802a/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"motorbikes",
+										"ce1689b3-93a9-4784-8daf-d3357521802a",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list motorbike",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/motorbikes",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"motorbikes"
+									]
+								},
+								"description": "danh sach nha san xuat"
+							},
+							"response": []
+						},
+						{
+							"name": "Get motorbike details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/motorbikes/ce1689b3-93a9-4784-8daf-d3357521802a/details",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"motorbikes",
+										"ce1689b3-93a9-4784-8daf-d3357521802a",
+										"details"
+									]
+								},
+								"description": "chi tiet nha san xuat"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Products (Accessories)",
+					"item": [
+						{
+							"name": "Medias",
+							"item": [
+								{
+									"name": "Add image for accessory",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "source",
+													"value": "",
+													"type": "file"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/images/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"images",
+												"create"
+											]
+										},
+										"description": "/api/admin/products/{accessory_id}/images/create"
+									},
+									"response": []
+								},
+								{
+									"name": "Update image for accessory",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "source",
+													"type": "file"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/images/5/edit",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"images",
+												"5",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete image for accessory",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/images/3/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"images",
+												"3",
+												"delete"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get list image for accessories",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/images",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"images"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "tags",
+							"item": [
+								{
+									"name": "Add new tags for accessory",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "sub_menu_id",
+													"value": "bad5e1b8-3427-4548-8be7-3ad98d9bd62a",
+													"description": "sub menu id",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/tags/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"tags",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit tags for accessory",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "sub_menu_id",
+													"value": "7632e150-ab25-454b-a416-a8eee65e724d",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/tags/3/edit",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"tags",
+												"3",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove tags for accessory",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/tags/3/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"tags",
+												"3",
+												"delete"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get list tags for accessory",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/tags",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"tags"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "require",
+							"item": [
+								{
+									"name": "Add new require",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "motorbike_id",
+													"value": "93805a90-10a2-4ff3-b3b5-a8b2f7a241df",
+													"description": "uuid",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/requires/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"requires",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get list motorbike",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "sub_categories_id",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/requires",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"requires"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit require",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "motorbike_id",
+													"value": "93805a90-10a2-4ff3-b3b5-a8b2f7a241df",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/requires/8/edit",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"requires",
+												"8",
+												"edit"
+											]
+										},
+										"description": "/api/v1/accessories/{accessory_id}/requires/{require_id}/edit"
+									},
+									"response": []
+								},
+								{
+									"name": "Remove require",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT {{token_admin}}"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "{{url}}/api/v1/accessories/088c2017-c8f5-4fd9-8e50-d72409d77f58/requires/7/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"accessories",
+												"088c2017-c8f5-4fd9-8e50-d72409d77f58",
+												"requires",
+												"7",
+												"delete"
+											]
+										},
+										"description": "/api/v1/accessories/{accessory_id}/requires/{require_id}/delete"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Add new accessories",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "producer_id",
+											"value": "5621c65c-691d-4d68-b457-0fef73399698",
+											"description": "id producer",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": " bong den",
+											"type": "text"
+										},
+										{
+											"key": "descriptions",
+											"value": " abcd",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": " 40",
+											"description": "float",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": " 10",
+											"description": "int",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/accessories/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accessories",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update accessories",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "producer_id",
+											"value": "27257719-b091-4fae-a61d-d03b35fb5f02",
+											"description": "producer id",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Item 1",
+											"type": "text"
+										},
+										{
+											"key": "descriptions",
+											"value": " Bong de",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": " 40",
+											"description": "float",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": " 100",
+											"description": "int",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/accessories/db17e9d3-d618-4d83-a05f-552409768e4d/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accessories",
+										"db17e9d3-d618-4d83-a05f-552409768e4d",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete accessories",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token_admin}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/accessories/d977d9fb-bb7b-4767-9dac-70ad657ef710/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accessories",
+										"d977d9fb-bb7b-4767-9dac-70ad657ef710",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get accessory details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/accessories/9eda11c0-2036-472a-9e4a-77d4fd1fb9c5/details",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accessories",
+										"9eda11c0-2036-472a-9e4a-77d4fd1fb9c5",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list accessories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/api/v1/accessories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accessories"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/update_password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"update_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/admin/customer/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/admin/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get customers details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/admin/accounts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ShoppingCarts",
+			"item": [
+				{
+					"name": "add to cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accessory_id",
+									"value": "db17e9d3-d618-4d83-a05f-552409768e4d",
+									"description": "product id",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accessory_id",
+									"value": "ii",
+									"description": "product id",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": " 10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/v1/carts/f6e7838b-5cb4-4ed3-aeb1-536862616e57",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"f6e7838b-5cb4-4ed3-aeb1-536862616e57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/v1/remove_carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"remove_carts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "quocdu",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "quocduby@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/customers/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"customers",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "quocdu",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "quocduby@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/customers/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"customers",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset_passoword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/customers/reset_password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"customers",
+								"reset_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/customers/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"customers",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot_password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "quocduby@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/customers/forgot_password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"customers",
+								"forgot_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify forgot_password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZXh0IjoicXVvY2R1YnlAZ21haWwuY29tIn0.zm3lo2s_TQURr-NtZkx5nwrskWLidd2csgFdkwrNiPY",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "quocdu",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/customers/verify_forgot_password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"customers",
+								"verify_forgot_password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "list orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/v1/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/v1/orders/5a5301e2-80e8-4de4-8f16-9b2b9f82856a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"5a5301e2-80e8-4de4-8f16-9b2b9f82856a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check out order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_cus}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_number",
+									"value": "4242424242424242",
+									"type": "text"
+								},
+								{
+									"key": "cvc",
+									"value": "798",
+									"description": "// length 3",
+									"type": "text"
+								},
+								{
+									"key": "exp_month",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "exp_year",
+									"value": "2020",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Can Tho, Viet Nam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/checkout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check delivered order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token_admin}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/v1/delivered/5a5301e2-80e8-4de4-8f16-9b2b9f82856a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivered",
+								"5a5301e2-80e8-4de4-8f16-9b2b9f82856a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fd17bb22-be57-4ce5-86d9-58b0257384b0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4fe21ebd-a3b9-457f-ab5e-4e21ff0aaaf5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "c8a6bcf5-bbbb-445c-8f2f-9da85f786045",
+			"key": "token_admin",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTM4NjQyNzc5LCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSJ9.-ggM59xW8OEqzMR5fE29emcB8K4z610ub08uink1DVw",
+			"type": "string"
+		},
+		{
+			"id": "6dcca616-1e3b-45c0-bbbf-48ef260f6899",
+			"key": "url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"id": "3d295bcb-15e2-4735-922d-f387e73713cc",
+			"key": "token_cus",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InF1b2NkdSIsImV4cCI6MTUzODY1NjY4MSwiZW1haWwiOiJxdW9jZHVieUBnbWFpbC5jb20ifQ.C_s52FrZEEGg_NSISe2KgbhEgLEvxYSTDfe31qmQOw8",
+			"type": "string"
+		}
+	]
+}
